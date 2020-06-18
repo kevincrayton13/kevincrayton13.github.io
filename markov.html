@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Markov Quote Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Home</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Markov Quote Generator</h1>
+							<span><img src="images/markov.jpg" height = '300px' alt="" /></span>
+							<h4>Instructions</h4>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is recommended to generate around 20-25 quotes to
+								maximize the chances of generating an amusing quote.</p>
+							<a href='markov.exe'>Executable File (Follow the onscreen instructions)</a>
+							<p>&nbsp;</p>
+							<a href='https://github.com/kevincrayton13/markov/blob/master/markov.py'>Source Code</a>
+							<p>&nbsp;</p>
+							<h4>Additional Information</h4>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This program operates by making dictionaries that take a
+								little over 400 humorous quotes and map the individual words to their previous word, and then the previous two words.
+								For example, given the quotes 'My dog eats my homework' and 'She eats my sandwich', a dictionary entry for key 'eats', 'my' would look
+								like dict['eats', 'my'] = 'homework', 'sandwich'. Duplicate entries are not only allowed, but encouraged.
+								A Markov chain can generate predictions based on what previous data is recieved. If 'homework' showed up
+								ten times in the quotes file after ['eats', 'my'], and 'sandwich' only showed up once, the generator would be far
+								more likely to select 'homework' as the next word. The big limitation is choosing the first word, and this is done by
+								picking randomly.
+								</p>
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

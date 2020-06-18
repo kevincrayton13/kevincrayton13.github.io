@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>An Unbreakable Cypher</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Home</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>An Unbreakable Cypher</h1>
+							<span><img src="images/caesar.jpg" height = 300px alt="" /><img src="images/caesar.jpg" height = 300px alt="" />
+								<img src="images/caesar.jpg" height = 300px alt="" /><img src="images/caesar.jpg" height = 300px alt="" /></span>
+							<div></div>
+							<a href='onetimepad.exe'>Executable File (Follow the onscreen instructions)</a>
+							<p>&nbsp;</p>
+							<a href='https://github.com/kevincrayton13/onetimepad/blob/master/onetimepad.py'>Source Code</a>
+							<p>&nbsp;</p>
+							<h4>Additional Information</h4>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any user with a remedial knowledge of cyphers would immediately balk at the pictures of Caesar
+								at the top of the page and say 'A Caesar cypher is perfectly breakable!', and they would be right.
+								But when chained together, and the keys chosen are truly random and only used once, an unbreakable cypher is formed and is known as the
+								One Time Pad (OTP). Here is a simplified example: Say a user wishes to send the message 'cat'. The first step
+								would be to pick at random the key they wish to use. This key must be the same length as the message. In this example,
+								the key will be bcd (this is not a very secure key, but it was chosen to make the example more understandable).
+								To encrypt the first character of the message 'c', it is transposed to 'd'(one letter away), since the first character in the
+								key 'b' is one letter away from 'a'. The second character of the message is 'a', so that character is changed to 'c' (two letters away)
+								because the second character in the key 'c' is two letters away from 'a'. The final character in the message is 't',
+								which will be changed to 'w' (three letters away) because the third character in the key is d, which is three letters away from a.
+								A challenge when using this cypher in real life is ensuring that the key and message get to the recipient safely.
+								Common practice was to write a bunch of keys beforehand, and give a copy to each sender/recipient. Once that key was used,
+								both the sender and the recipient would tear the key off of the top of the collection of keys and destroy it, ensuring
+								that the key was not used again as well as making sure both the sender and recipient were using the same key at
+								the same time.<p>
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

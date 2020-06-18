@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>A-Star Algorithm</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Home</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>A-Star Search Algorithm</h1>
+							<span class="image main"><img src="images/astar.jpg" height = '300px' alt="" /></span>
+							<h4>Instructions</h4>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The program will find the shortest path from the green dot to
+								 the red dot. The user may move these dots by clicking and dragging them to the desired location.
+							 	The user may also choose to introduce obstacles to challenge the algorithm a little. This is done by
+								right clicking and hovering over desired locations. This enables the user to draw a line with one
+								click instead of clicking for each node they wish to block. Once the user is satisfied with their work,
+								the enter key will run the algorithm and find the shortest path between the two points. Press R to do
+								the whole process over again.</p>
+							<a href='astar.exe'>Executable File (The program will need a second to load everything, no need to type anything)</a>
+							<p>&nbsp;</p>
+							<a href='https://github.com/kevincrayton13/astaralgorithm/blob/master/astar.py'>Source Code</a>
+							<p>&nbsp;</p>
+							<h4>Additional Information</h4>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The A-Star algorithm is an offshoot of the Dijkstra algorithm
+								that aimed to shave off some time finding the endpoint. Dijkstra only takes the cost of the path into
+								consideration, meaning that if your target is on a costly path, Dijkstra will find that point last.
+								A-Star addresses this by factoring in the distance to the target from the point being evaluated.
+								This will ensure that progress is being made toward the target endpoint, even if that path is costly.
+								</p>
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

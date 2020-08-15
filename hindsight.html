@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13071,6 +13071,7 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
+<a href='index.html'>Back to Home</a>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13258,7 +13259,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">sql</span>
 
-<span class="n">db</span> <span class="o">=</span> <span class="n">sql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;venue_tips.sql&#39;</span><span class="p">)</span>    
+<span class="n">db</span> <span class="o">=</span> <span class="n">sql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;venue_tips.sql&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;SELECT * FROM venues&#39;&#39;&#39;</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
 </pre></div>
 
@@ -13402,7 +13403,7 @@ div#notebook {
     <span class="k">if</span> <span class="n">rating</span> <span class="o">&lt;</span> <span class="mf">7.3</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;red&#39;</span>
     <span class="k">elif</span> <span class="n">rating</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;green&#39;</span>
     <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;blue&#39;</span>
-    
+
 <span class="k">for</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">rat</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">]):</span>
     <span class="n">f</span><span class="o">.</span><span class="n">Marker</span><span class="p">([</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span> <span class="n">icon</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">color_define</span><span class="p">(</span><span class="n">rat</span><span class="p">),</span> <span class="n">icon</span> <span class="o">=</span> <span class="s1">&#39;icon&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 <span class="n">m</span>
@@ -13484,13 +13485,13 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>c:\users\kevin\appdata\local\programs\python\python38\lib\site-packages\pandas\core\indexing.py:845: SettingWithCopyWarning: 
+<pre>c:\users\kevin\appdata\local\programs\python\python38\lib\site-packages\pandas\core\indexing.py:845: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   self.obj[key] = _infer_fill_value(value)
-c:\users\kevin\appdata\local\programs\python\python38\lib\site-packages\pandas\core\indexing.py:1048: SettingWithCopyWarning: 
+c:\users\kevin\appdata\local\programs\python\python38\lib\site-packages\pandas\core\indexing.py:1048: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -13553,13 +13554,13 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span class="c1">#takes in cluster label from geographic segmentation, outputs a Location Pull</span>
 <span class="k">def</span> <span class="nf">cluster_pull</span><span class="p">(</span><span class="n">labell</span><span class="p">):</span>
     <span class="n">tempdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">labell</span><span class="p">,</span> <span class="p">:]</span>
-    
+
     <span class="n">abv</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">blw</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">rat</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">tempdf</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">rat</span> <span class="o">&lt;</span> <span class="mf">7.3</span><span class="p">:</span> <span class="n">blw</span> <span class="o">+=</span> <span class="n">val</span> 
+        <span class="k">if</span> <span class="n">rat</span> <span class="o">&lt;</span> <span class="mf">7.3</span><span class="p">:</span> <span class="n">blw</span> <span class="o">+=</span> <span class="n">val</span>
         <span class="k">elif</span> <span class="n">rat</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span> <span class="n">avg</span> <span class="o">+=</span> <span class="n">val</span>
         <span class="k">else</span><span class="p">:</span> <span class="n">abv</span> <span class="o">+=</span> <span class="n">val</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">val</span>
@@ -13597,7 +13598,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span class="n">avglist</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">avglist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cluster_pull</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-    
+
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">avglist</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">% Lo</span><span class="s1">cation Pull&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13661,7 +13662,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -13673,7 +13674,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   </div>
 </body>
 
- 
+
 
 
 </html>
